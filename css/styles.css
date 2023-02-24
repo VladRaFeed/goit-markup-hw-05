@@ -160,7 +160,7 @@ img {
   background-color: var(--acent-color);
   border-radius: 2px;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 }
 
@@ -422,13 +422,13 @@ img {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   fill: var(--customers-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partners-icons {
   height: 56px;
   width: 104px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partners-icons-link:hover,
@@ -645,6 +645,8 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
